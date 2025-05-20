@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbazaar - Welcome!</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Flexbazaar</h1>
+
+    <!-- Newsletter/Promo Sign-up Form Placeholder -->
+    <section id="newsletter-signup">
+        <h2>Stay Updated!</h2>
+        <p>Sign up for our newsletter to get the latest deals and product updates.</p>
+        <!-- Form will go here -->
+    </section>
+
+    <!-- Featured Products Section Placeholder -->
+    <section id="featured-products">
+        <h2>Featured Products</h2>
+        <!-- Product listings will go here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="gold-border-box"> <!-- Using existing class for thematic consistency -->
+            <form action="/contact" method="POST"> <!-- Assuming a POST request to /contact -->
+                <div>
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div>
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div>
+                    <label for="contactSubject">Subject:</label>
+                    <input type="text" id="contactSubject" name="contactSubject" required>
+                </div>
+                <div>
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+:root {
+    --primary-gold: #FFD700;
+    --darker-gold: #B8860B;
+    --lighter-gold-cream: #FFF8DC;
+    --dark-text: #583E26; /* Dark brown for text */
+}
+
+body {
+    background-color: var(--lighter-gold-cream);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px; /* Added some padding for content */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--darker-gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a {
+    color: var(--primary-gold);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--darker-gold);
+    text-decoration: underline;
+}
+
+/* Initial "Flowing Gold" Elements - Static Effects */
+
+/* Example of a gradient background for a header or footer area */
+.header-gradient {
+    background: linear-gradient(to right, var(--lighter-gold-cream), var(--primary-gold));
+    padding: 1em 0;
+    text-align: center; /* Example usage */
+}
+
+/* Example of a golden border */
+.gold-border-box {
+    border: 2px solid var(--darker-gold);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF; /* A slightly off-white for contrast with the border */
+}
+
+/* Placeholder class for elements that might later have "flowing" animations */
+.gold-accent-flow {
+    background: var(--primary-gold);
+    color: var(--dark-text); /* Ensure text is readable on this background */
+    padding: 10px 15px;
+    border-radius: 5px; /* Slightly rounded corners */
+    display: inline-block; /* Or block, depending on usage */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Style for sections (as used in the HTML placeholders) */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid var(--primary-gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Subtle default border */
+    border-radius: 4px;
+    box-sizing: border-box; /* So padding doesn't increase width */
+    background-color: #fff; /* White background for fields */
+    color: var(--dark-text);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: var(--primary-gold);
+    outline: none; /* Remove default focus glow */
+    box-shadow: 0 0 5px var(--primary-gold); /* Optional: add a golden glow */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize, disable horizontal */
+    min-height: 80px;
+}
+
+button,
+input[type="submit"] { /* Targeting both for flexibility, though HTML uses <button> */
+    background-color: var(--primary-gold);
+    color: var(--dark-text);
+    padding: 10px 20px;
+    border: 1px solid var(--darker-gold);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--darker-gold);
+    color: var(--lighter-gold-cream); /* Lighter text on darker hover background */
+}
+
+/* Product Grid Styling */
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px 0; /* Add some padding around the grid */
+}
+
+.product-card {
+    border: 1px solid var(--darker-gold);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: center; /* Center image if it's smaller than the card width */
+    max-height: 150px; /* Max height for image consistency */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: var(--darker-gold);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Ensure 'Add to Cart' button in product card uses existing button styles */
+.product-card .add-to-cart-btn {
+    /* Styles are inherited from the global button styles,
+       but you can add specific tweaks here if needed */
+    width: 100%; /* Make button take full width of card padding */
+    margin-top: auto; /* Push button to the bottom if card heights vary */
+}
+
+/* Cart Table Styling */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid var(--darker-gold);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: var(--primary-gold);
+    color: var(--dark-text);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cart-table td {
+    background-color: #fff;
+}
+
+/* Align numerical data to the right for better readability if desired */
+.cart-table td:nth-child(2), /* Price */
+.cart-table td:nth-child(3), /* Quantity */
+.cart-table td:nth-child(4) { /* Total */
+    text-align: right;
+}
+
+.cart-table tbody tr:hover {
+    background-color: var(--lighter-gold-cream);
+}
